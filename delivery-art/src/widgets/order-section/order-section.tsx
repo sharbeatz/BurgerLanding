@@ -5,7 +5,7 @@ export default function OrderSection() {
   return (
     <section className="order-section">
       <div className="container order-section__container">
-        <img src="./images/burger.png" alt="" />
+        <img className="order-section__img" src="./images/burger.png" alt="" />
         <div className="order-section__text-block">
           <h3 className="order-section__title">Burger King</h3>
           <p className="order-section__desc">

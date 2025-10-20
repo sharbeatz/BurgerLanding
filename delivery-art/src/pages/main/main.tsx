@@ -7,8 +7,6 @@ import OrderSection from "../../widgets/order-section/order-section";
 export const Main = () => {
   return (
     <>
-      <Header />
-
       <main className="main">
         <Welcome />
         <FoodList />

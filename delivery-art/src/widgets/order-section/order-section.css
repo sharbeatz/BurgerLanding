@@ -27,6 +27,27 @@
 }
 
 .order-section__price {
+  display: block;
   font-size: 24px;
+  color: #F6762C;
   margin-bottom: 20px;
 }
+
+
+/* .order-section__img{
+  transition: transform 0.3s ease;
+}
+
+.order-section__img:hover{
+  transform: scale(1.05);
+} */
+
+.order-section__container {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.order-section__container:hover{
+  transform: scale(1.05);
+}
+

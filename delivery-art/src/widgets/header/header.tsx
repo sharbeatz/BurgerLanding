@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import OrderButton from "../order-button/order-button";
+import { routes } from "../../app/routes";
 
 export default function Header() {
   return (
@@ -12,14 +14,17 @@ export default function Header() {
         <nav className="header__nav">
           <ul className="header__list">
             <li className="header__item">
-              <a href="#!" className="header__link header__link--active">
-                HOME
-              </a>
+              <Link
+                to={routes.main}
+                className="header__link header__link--active"
+              >
+                ГЛАВНАЯ
+              </Link>
             </li>
             <li className="header__item">
-              <a href="#!" className="header__link">
-                PAGES
-              </a>
+              <Link to={routes.menu} className="header__link">
+                МЕНЮ
+              </Link>
             </li>
             <li className="header__item">
               <a href="#!" className="header__link">
