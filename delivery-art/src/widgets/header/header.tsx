@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import OrderButton from "../order-button/order-button";
 import { routes } from "../../app/routes";
 
@@ -14,17 +14,28 @@ export default function Header() {
         <nav className="header__nav">
           <ul className="header__list">
             <li className="header__item">
-              <Link
+              <NavLink
                 to={routes.main}
-                className="header__link header__link--active"
+                className={({ isActive }) =>
+                  isActive
+                    ? "header__link header__link--active"
+                    : "header__link"
+                }
               >
                 ГЛАВНАЯ
-              </Link>
+              </NavLink>
             </li>
             <li className="header__item">
-              <Link to={routes.menu} className="header__link">
+              <NavLink
+                to={routes.menu}
+                className={({ isActive }) =>
+                  isActive
+                    ? "header__link header__link--active"
+                    : "header__link"
+                }
+              >
                 МЕНЮ
-              </Link>
+              </NavLink>
             </li>
             <li className="header__item">
               <a href="#!" className="header__link">

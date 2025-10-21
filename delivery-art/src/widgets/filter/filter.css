@@ -9,6 +9,7 @@
     border-radius: 5px;
     background-color: #312F30;
     cursor: pointer;
+    color: white;
 
     
 }
@@ -16,6 +17,7 @@
 .menu__filter-food {
     display: flex;
     gap: 10px;
+   
 }
 
 .menu__filter-text {
@@ -35,6 +37,7 @@
   background: transparent;
   font-size: 16px;   
   width: fit-content;
+  text-align: left;
 }
 
 .menu__filter-option {
