@@ -54,7 +54,9 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <OrderButton />
+        <Link className="header__cart" to={routes.cart}>
+          🛒
+        </Link>
       </div>
     </header>
   );
