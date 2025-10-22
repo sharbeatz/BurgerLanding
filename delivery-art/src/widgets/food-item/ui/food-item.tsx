@@ -1,10 +1,6 @@
 import type { FoodItemType } from "../lib/type";
 import "./food-item.css";
-
-// Обработчик клика для добавления товара в корзину
-const handleAddToCart = () => {
-  console.log(`Добавлен товар: ${id} в корзину`);
-};
+import { useAddToCartStore } from "../../../shared/stores/add-to-cart";
 
 export default function FoodItem({
   id,
@@ -13,6 +9,17 @@ export default function FoodItem({
   img,
   price,
 }: FoodItemType) {
+  // Обработчик клика для добавления товара в корзину
+  const addItem = useAddToCartStore((state) => state.addItem);
+  const handleAddToCart = (
+    id: string,
+    title: string,
+    price: string,
+    img: string
+  ) => {
+    const foodItem = { id, title, price, img };
+    addItem(foodItem);
+  };
   return (
     <div className="food-list__card">
       <img src={img} alt="" className="food-list__img" />
@@ -23,7 +30,8 @@ export default function FoodItem({
           <span className="food-list__price">{price}</span>
           <button
             className="food-list__cart-btn"
-            onClick={() => handleAddToCart(id, title)}
+            // даю понять что данные значения точно будут. Потом можно будет убрать, когда буду редактировать типы
+            onClick={() => handleAddToCart(id!, title!, price!, img!)}
           >
             +
           </button>
