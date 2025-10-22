@@ -8,9 +8,11 @@ export default function FoodList() {
         {FOOD_ITEM.map((item) => (
           <FoodItem
             key={item.id}
+            id={item.id}
             title={item.title}
             desc={item.desc}
             img={item.img}
+            price={item.price}
           />
         ))}
       </div>
