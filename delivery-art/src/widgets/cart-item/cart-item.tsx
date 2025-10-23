@@ -1,8 +1,8 @@
 import "./cart-item.css";
-import type { FoodItemType } from "../food-item/lib/type";
+import type { FoodMenuType } from "../../shared/types/food-types";
 import { useAddToCartStore } from "../../shared/stores/add-to-cart";
 
-export default function CartItem({ id, title, img, price }: FoodItemType) {
+export default function CartItem({ id, title, img, price }: FoodMenuType) {
   const removeItem = useAddToCartStore((state) => state.removeItem);
   // заменить потом string на норм значения типа FoodItemType
   const handleRemoveToCart = (id: string) => {
@@ -21,6 +21,7 @@ export default function CartItem({ id, title, img, price }: FoodItemType) {
       <span className="cart-list__price">{price} руб.</span>
       <button
         className="cart-list__delete"
+        // показываю что id точно будет !
         onClick={() => handleRemoveToCart(id!)}
       >
         ❌

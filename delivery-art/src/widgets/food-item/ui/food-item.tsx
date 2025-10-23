@@ -1,4 +1,4 @@
-import type { FoodItemType } from "../lib/type";
+import type { FoodMenuType } from "../../../shared/types/food-types";
 import "./food-item.css";
 import { useAddToCartStore } from "../../../shared/stores/add-to-cart";
 
@@ -8,7 +8,7 @@ export default function FoodItem({
   desc,
   img,
   price,
-}: FoodItemType) {
+}: FoodMenuType) {
   // Обработчик клика для добавления товара в корзину
   const addItem = useAddToCartStore((state) => state.addItem);
   const handleAddToCart = (

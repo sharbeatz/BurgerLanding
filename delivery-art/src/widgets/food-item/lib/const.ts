@@ -1,6 +1,6 @@
-import type { FoodItemType } from "./type";
+import type { FoodMenuType } from "../../../shared/types/food-types";
 
-export const FOOD_ITEM: FoodItemType[] = [
+export const FOOD_ITEM: FoodMenuType[] = [
   {
     id: "1",
     title: "Classic Chicken Paella",

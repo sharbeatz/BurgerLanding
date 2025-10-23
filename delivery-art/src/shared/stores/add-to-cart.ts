@@ -1,10 +1,9 @@
 import { create } from "zustand";
-import { FOOD_ITEM } from "../../widgets/food-item/lib/const";
-import type { FoodItemType } from "../../widgets/food-item/lib/type";
+import type { FoodMenuType } from "../types/food-types";
 
 interface AddToCartStore {
-  items: FoodItemType[];
-  addItem: (item: FoodItemType) => void;
+  items: FoodMenuType[];
+  addItem: (item: FoodMenuType) => void;
   removeItem: (id: string) => void;
 }
 // переименовать переменные
