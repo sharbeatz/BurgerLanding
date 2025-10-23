@@ -13,11 +13,21 @@
     width: 150px;
 }
 
+
+.cart-list_title {
+    text-align: center;
+    min-width: 150px;
+    max-width: 200px;
+}
+
 .cart-list__quantity {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    min-width: 150px;
+    max-width: 200px;
 }
+
 
 .cart-list__quantity-btn {
     border: none;
@@ -25,6 +35,11 @@
     font-size: 24px;
     cursor: pointer;
     color: #F6762C;
+}
+
+.cart-list__price {
+    text-align: end;
+
 }
 
 .cart-list__delete {

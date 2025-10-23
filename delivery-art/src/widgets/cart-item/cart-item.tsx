@@ -18,7 +18,7 @@ export default function CartItem({ id, title, img, price }: FoodItemType) {
         <span>1</span>
         <button className="cart-list__quantity-btn">➖</button>
       </div>
-      <span className="cart-list__price">{price}</span>
+      <span className="cart-list__price">{price} руб.</span>
       <button
         className="cart-list__delete"
         onClick={() => handleRemoveToCart(id!)}

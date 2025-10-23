@@ -14,7 +14,7 @@ export default function FoodItem({
   const handleAddToCart = (
     id: string,
     title: string,
-    price: string,
+    price: number,
     img: string
   ) => {
     const foodItem = { id, title, price, img };
@@ -27,7 +27,7 @@ export default function FoodItem({
         <h4 className="food-list__title">{title}</h4>
         <p className="food-list__desc">{desc}</p>
         <div className="food-list__cart">
-          <span className="food-list__price">{price}</span>
+          <span className="food-list__price">{price} руб.</span>
           <button
             className="food-list__cart-btn"
             // даю понять что данные значения точно будут. Потом можно будет убрать, когда буду редактировать типы
