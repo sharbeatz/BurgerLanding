@@ -15,6 +15,7 @@ export function FoodCartList() {
           title={item.title}
           price={item.price}
           img={item.img}
+          quantity={item.quantity}
         />
       ))}
     </>

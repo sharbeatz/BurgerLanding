@@ -29,4 +29,25 @@ export const FOOD_ITEM: FoodMenuType[] = [
     img: "./images/food-list-4.jpg",
     price: 1100,
   },
+  {
+    id: "5",
+    title: "Бургер от Руслана!!!",
+    desc: "Лучший бургер от РУсланга!!!.",
+    img: "./images/burger_ruslan.jpg",
+    price: 1666,
+  },
+  {
+    id: "6",
+    title: "Куринный пирог",
+    desc: "Самый вкусный пирог от Софии",
+    img: "./images/pirog_sonya.jpg",
+    price: 1000,
+  },
+  {
+    id: "7",
+    title: "Яичница 'С добрым утром'",
+    desc: "Утро добрым не бывает",
+    img: "./images/morning.jpg",
+    price: 133,
+  },
 ] as const;

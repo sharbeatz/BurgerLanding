@@ -12,8 +12,9 @@ export interface FoodMenuType {
   desc?: string;
   price?: number;
   img?: string;
+  quantity?: number;
 }
 
-interface FoodCartType extends Omit<FoodMenuType, "desc"> {
+export interface FoodCartType extends Omit<FoodMenuType, "desc"> {
   quantity?: number;
 }

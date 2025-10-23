@@ -2,7 +2,13 @@ import "./food-cart-item.css";
 import type { FoodMenuType } from "../../shared/types/food-types";
 import { useAddToCartStore } from "../../shared/stores/add-to-cart";
 
-export function FoodCartItem({ id, title, img, price }: FoodMenuType) {
+export function FoodCartItem({
+  id,
+  title,
+  img,
+  price,
+  quantity,
+}: FoodMenuType) {
   const removeItem = useAddToCartStore((state) => state.removeItem);
   // заменить потом string на норм значения типа FoodItemType
   const handleRemoveToCart = (id: string) => {
@@ -15,7 +21,7 @@ export function FoodCartItem({ id, title, img, price }: FoodMenuType) {
       <div className="cart-list__quantity">
         {" "}
         <button className="cart-list__quantity-btn">➕</button>
-        <span>1</span>
+        <span>{quantity}</span>
         <button className="cart-list__quantity-btn">➖</button>
       </div>
       <span className="cart-list__price">{price} руб.</span>
