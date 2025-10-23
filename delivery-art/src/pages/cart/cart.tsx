@@ -1,6 +1,6 @@
 import "./cart.css";
-import CartItem from "../../widgets/cart-item/cart-item";
-import CartList from "../../widgets/cart-list/cart-list";
+import { FoodCartItem } from "../../widgets/food-cart-item/food-cart-item";
+import { FoodCartList } from "../../widgets/food-cart-list/food-cart-list";
 
 export default function Cart() {
   return (
@@ -8,7 +8,7 @@ export default function Cart() {
       <section className="cart-list">
         <div className="container cart__container">
           <p className="cart__title">Корзина</p>
-          <CartList />
+          <FoodCartList />
         </div>
       </section>
     </main>

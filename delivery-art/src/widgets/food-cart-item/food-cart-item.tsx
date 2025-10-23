@@ -1,8 +1,8 @@
-import "./cart-item.css";
+import "./food-cart-item.css";
 import type { FoodMenuType } from "../../shared/types/food-types";
 import { useAddToCartStore } from "../../shared/stores/add-to-cart";
 
-export default function CartItem({ id, title, img, price }: FoodMenuType) {
+export function FoodCartItem({ id, title, img, price }: FoodMenuType) {
   const removeItem = useAddToCartStore((state) => state.removeItem);
   // заменить потом string на норм значения типа FoodItemType
   const handleRemoveToCart = (id: string) => {

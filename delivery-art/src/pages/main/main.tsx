@@ -1,7 +1,7 @@
 import "./main.css";
 import Header from "../../widgets/header/header";
 import Welcome from "../../widgets/welcome/welcome";
-import FoodList from "../../widgets/food-list/food-list";
+import { FoodMenuList } from "../../widgets/food-menu-list/food-menu-list";
 import OrderSection from "../../widgets/order-section/order-section";
 
 export const Main = () => {
@@ -9,7 +9,7 @@ export const Main = () => {
     <>
       <main className="main">
         <Welcome />
-        <FoodList />
+        <FoodMenuList />
         <OrderSection />
       </main>
     </>

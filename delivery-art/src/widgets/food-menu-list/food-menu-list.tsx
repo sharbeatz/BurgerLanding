@@ -1,12 +1,12 @@
-import FoodItem from "../food-item/ui/food-item";
-import { FOOD_ITEM } from "../food-item/lib/const";
+import { FoodMenuItem } from "../food-menu-item/ui/food-menu-item";
+import { FOOD_ITEM } from "../food-menu-item/lib/const";
 
-export default function FoodList() {
+export function FoodMenuList() {
   return (
     <section className="food-list">
       <div className="container food-list__container">
         {FOOD_ITEM.map((item) => (
-          <FoodItem
+          <FoodMenuItem
             key={item.id}
             id={item.id}
             title={item.title}

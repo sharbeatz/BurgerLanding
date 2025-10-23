@@ -1,4 +1,4 @@
-import FoodList from "../../widgets/food-list/food-list";
+import { FoodMenuList } from "../../widgets/food-menu-list/food-menu-list";
 import Filter from "../../widgets/filter/filter";
 
 export default function Menu() {
@@ -7,7 +7,7 @@ export default function Menu() {
       <div className="container menu__container">
         <Filter />
 
-        <FoodList />
+        <FoodMenuList />
       </div>
     </section>
   );

@@ -1,15 +1,15 @@
 import React from "react";
 import { useAddToCartStore } from "../../shared/stores/add-to-cart";
-import CartItem from "../cart-item/cart-item";
+import { FoodCartItem } from "../food-cart-item/food-cart-item";
 import Cart from "../../pages/cart/cart";
 
-export default function CartList() {
+export function FoodCartList() {
   const items = useAddToCartStore((state) => state.items);
   return (
     <>
       {items.length === 0 && <p>Пусто, как в холодильнике ночью.</p>}
       {items.map((item) => (
-        <CartItem
+        <FoodCartItem
           key={item.id}
           id={item.id}
           title={item.title}
