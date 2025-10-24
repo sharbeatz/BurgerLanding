@@ -6,6 +6,7 @@ interface AddToCartStore {
   items: FoodCartType[];
   addItem: (item: FoodMenuType) => void;
   removeItem: (id: string) => void;
+  decrementItem: (id: string) => void;
 }
 // ({ items: [...state.items, item] }));
 // переименовать переменные
@@ -17,34 +18,46 @@ export const useAddToCartStore = create<AddToCartStore>((set) => ({
       desc: "Лучший бургер от РУсланга!!!.",
       img: "./images/burger_ruslan.jpg",
       price: 1666,
-      quantity: 0,
+      quantity: 2,
     },
   ],
-  addItem: (item) => {
+  addItem: (item: FoodMenuType) => {
     set((state) => {
-      console.log(item);
       const existingItem = state.items.find(
         (cartItem) => cartItem.id === item.id
       );
-
       if (existingItem) {
         return {
           items: state.items.map((cartItem) =>
-            cartItem.id === item.id
+            cartItem.id === existingItem.id
               ? { ...cartItem, quantity: (cartItem.quantity || 0) + 1 }
               : cartItem
           ),
         };
       } else {
-        return {
-          items: [...state.items, { ...item, quantity: 1 }],
-        };
+        return { items: [...state.items, { ...item, quantity: 1 }] };
       }
-
-      console.log(state.items);
-      return state;
     });
   },
+  decrementItem: (id: string) => {
+    set((state) => {
+      const existingItem = state.items.find((cartItem) => cartItem.id === id);
+      if (existingItem && existingItem.quantity! > 1) {
+        return {
+          items: state.items.map((cartItem) =>
+            cartItem.id === id
+              ? { ...cartItem, quantity: cartItem.quantity! - 1 }
+              : cartItem
+          ),
+        };
+      } else {
+        return {
+          items: state.items.filter((item) => item.id !== id),
+        };
+      }
+    });
+  },
+
   removeItem: (id: string) => {
     set((state) => ({
       items: state.items.filter((item) => item.id !== id),

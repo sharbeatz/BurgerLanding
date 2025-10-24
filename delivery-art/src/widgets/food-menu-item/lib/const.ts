@@ -29,25 +29,33 @@ export const FOOD_ITEM: FoodMenuType[] = [
     img: "./images/food-list-4.jpg",
     price: 1100,
   },
+
   {
     id: "5",
-    title: "Бургер от Руслана!!!",
-    desc: "Лучший бургер от РУсланга!!!.",
-    img: "./images/burger_ruslan.jpg",
-    price: 1666,
-  },
-  {
-    id: "6",
     title: "Куринный пирог",
-    desc: "Самый вкусный пирог от Софии",
+    desc: "Самый вкусный пирог от Софии Николаевны",
     img: "./images/pirog_sonya.jpg",
     price: 1000,
   },
   {
-    id: "7",
+    id: "6",
     title: "Яичница 'С добрым утром'",
     desc: "Утро добрым не бывает",
     img: "./images/morning.jpg",
     price: 133,
+  },
+  {
+    id: "7",
+    title: "Хрустящие баклажаны",
+    desc: "Просто, вкусно и сытно",
+    img: "./images/ilnara.jpg",
+    price: 400,
+  },
+  {
+    id: "8",
+    title: "Такояки русская рулетка",
+    desc: "Попробуй блюдо родом из Осоки, но с острой русской душой, в одном из шариков с кальмаром",
+    img: "./images/andrey.jpg",
+    price: 612,
   },
 ] as const;
