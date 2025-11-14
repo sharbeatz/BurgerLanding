@@ -11,6 +11,7 @@
 .cart-list__img {
     border-radius: 30px;
     width: 150px;
+    height: 100px;
 }
 
 
@@ -37,6 +38,7 @@
     font-size: 24px;
     cursor: pointer;
     color: #F6762C;
+    font-size: 30px;
 }
 
 .cart-list__price {
@@ -51,6 +53,11 @@
     font-size: 20px;
     cursor: pointer;
     color: #F6762C;
+    width: 40px;
+}
+
+.cart-list__delete--img {
+    color: red;
 }
 
 /* #1C1C1C  #312F30  #F6762C */

@@ -7,6 +7,7 @@ interface AddToCartStore {
   addItem: (item: FoodMenuType) => void;
   removeItem: (id: string) => void;
   decrementItem: (id: string) => void;
+  incrementItem: (id: string) => void;
 }
 // ({ items: [...state.items, item] }));
 // переименовать переменные
@@ -22,6 +23,7 @@ export const useAddToCartStore = create<AddToCartStore>((set) => ({
     },
   ],
   addItem: (item: FoodMenuType) => {
+    console.log("Добавление", item);
     set((state) => {
       const existingItem = state.items.find(
         (cartItem) => cartItem.id === item.id
@@ -57,6 +59,25 @@ export const useAddToCartStore = create<AddToCartStore>((set) => ({
       }
     });
   },
+  incrementItem: (id: string) => {
+    set((state) => {
+      const item = state.items.find((item) => item.id === id);
+      console.log(item);
+      return {
+        items: state.items.map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity! + 1 } : item
+        ),
+      };
+    });
+  },
+
+  getTotalPrice: () => {
+    set((state)=> {
+      
+      return {
+      }
+    })
+  }
 
   removeItem: (id: string) => {
     set((state) => ({

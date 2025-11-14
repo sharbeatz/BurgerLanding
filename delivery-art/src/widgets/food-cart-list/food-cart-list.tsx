@@ -1,7 +1,6 @@
 import React from "react";
 import { useAddToCartStore } from "../../shared/stores/add-to-cart";
-import { FoodCartItem } from "../food-cart-item/food-cart-item";
-import Cart from "../../pages/cart/cart";
+import { FoodCartItem } from "../food-cart-item/ui/food-cart-item";
 
 export function FoodCartList() {
   const items = useAddToCartStore((state) => state.items);

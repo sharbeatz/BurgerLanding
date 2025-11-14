@@ -33,13 +33,13 @@ export const FOOD_ITEM: FoodMenuType[] = [
   {
     id: "5",
     title: "Куринный пирог",
-    desc: "Самый вкусный пирог от Софии Николаевны",
+    desc: "Самый вкусный пирог от Софи",
     img: "./images/pirog_sonya.jpg",
     price: 1000,
   },
   {
     id: "6",
-    title: "Яичница 'С добрым утром'",
+    title: "Яичница «С добрым утром»",
     desc: "Утро добрым не бывает",
     img: "./images/morning.jpg",
     price: 133,
@@ -53,7 +53,7 @@ export const FOOD_ITEM: FoodMenuType[] = [
   },
   {
     id: "8",
-    title: "Такояки русская рулетка",
+    title: "Такояки «Русская рулетка»",
     desc: "Попробуй блюдо родом из Осоки, но с острой русской душой, в одном из шариков с кальмаром",
     img: "./images/andrey.jpg",
     price: 612,

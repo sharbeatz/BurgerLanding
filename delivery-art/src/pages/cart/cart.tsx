@@ -1,5 +1,5 @@
 import "./cart.css";
-import { FoodCartItem } from "../../widgets/food-cart-item/food-cart-item";
+import { FoodCartItem } from "../../widgets/food-cart-item/ui/food-cart-item";
 import { FoodCartList } from "../../widgets/food-cart-list/food-cart-list";
 
 export default function Cart() {
